@@ -1,0 +1,126 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+font-size: 16px;
+}
+
+header {
+font-size: 12px;
+background-color: #333;
+color: #fff;
+padding: 1em;
+text-align: center;
+}
+
+#sobre {
+background-color: #f7f7f7;
+padding: 2em;
+font-size: 13px;
+}
+
+.logo{
+  border-radius: 500%;
+  border-style: solid;
+  border-color: white;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  align-items: center;
+}
+
+footer {
+
+    color: black;
+    font-size: 9px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.link-atecseven {
+    text-emphasis: none;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+    transition: color 0.3s, background-color 0.3s; /* Adicionar transição suave */
+}
+
+.link-atecseven:hover {
+    color: black; /* Cor do texto ao passar o mouse */
+    background-color: rgb(4, 4, 85); /* Fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas para destacar ainda mais */
+    font-size: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+.solicitar{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Seções */
+section {
+    margin: 40px 0;
+}
+
+/* Links sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.links {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+.contato{
+  text-align: center;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    .form-section {
+        padding: 30px;
+    }
+
+    input, button {
+        padding: 15px;
+    }
+}
