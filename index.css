@@ -55,18 +55,20 @@ footer {
 }
 
 button {
+  border-style: solid green;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 12px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
+  border-style: solid green;
     background-color: #45a049;
     transform: scale(1.05);
 }
