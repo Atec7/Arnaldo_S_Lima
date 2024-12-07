@@ -1,137 +1,165 @@
+/* index.css */
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-font-size: 16px;
-background-color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-font-size: 12px;
-background-color: #123;
-color: #fff;
-padding: 1em;
-text-align: center;
-border-radius: 2px;
-}
-
-#sobre {
-border-radius: 5px;
-background-color: #123;
-color: white;
-padding: 2em;
-font-size: 13px;
-}
-
-h2 {
-  color: white;
-}
-
-.logo{
-  border-radius: 50%;
-  border-style: solid ;
-  border-color:; white;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  align-items: center;
-}
-
-footer {
-
-    color: black;
-    font-size: 9px;
+    background: linear-gradient(to right, #000000, #333333);
+    color: #ffffff;
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.link-atecseven {
-    text-emphasis: none;
-    text-decoration: none;
-    font-size: 16px;
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img.logo {
+    max-width: 120px;
+    border-radius: 50%;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+h1 {
+    color: #FFD700;  /* Amarelo ouro */
+}
+
+p {
+    margin-bottom: 10px;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: aqua;
-    transition: color 0.3s, background-color 0.3s; /* Adicionar transição suave */
 }
 
-.link-atecseven:hover {
-    color: black; /* Cor do texto ao passar o mouse */
-    background-color: rgb(4, 4, 85); /* Fundo ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas para destacar ainda mais */
-    font-size: 10px;
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 button {
-  border-style: solid #123;
-    width: 100%;
-    padding: 10px;
-    background-color: #123;
-    color: white;
-    border: solid;
-    border-radius: 10px;
-    font-size: 16px;
+  width: 100%;
+    background: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
-  border-style: solid green;
-    background-color: #123;
-    transform: scale(1.00);
+    background: #FFC700;  /* Amarelo ouro escuro */
+    transform: scale(1.05);
 }
 
-button:active {
-    background-color: #3e8e41;
+footer {
+    background: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-.solicitar{
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
+footer a {
+    color: #FFD700;
+    text-decoration: none;
 }
 
-/* Seções */
-section {
-    margin: 40px 0;
+footer a:hover {
+    text-decoration: underline;
 }
 
-/* Links sociais */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-flex .container {
+    flex: 1 1 45%;
+    min-width: 280px;
+}
+
 .social-links {
-  border-radius: 50%;
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
-.links {
-    border-radius: 50%;
-    border-style: solid;
-    border-color: white;
-}
-
-.social-links a img {
-    width: 40px;
-    height: 40px;
+.social-links a {
+    display: inline-block;
     transition: transform 0.3s;
 }
 
-.social-links a img:hover {
+.social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+.social-links a:hover {
     transform: scale(1.2);
 }
 
-.contato{
-  text-align: center;
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header .container {
+        padding: 10px 0;
+    }
+    
+    ul li {
+        margin: 5px 0;
+        padding: 10px;
+    }
 }
 
-/* Responsividade */
-@media (min-width: 600px) {
-    .form-section {
-        padding: 30px;
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
     }
-
-    input, button {
-        padding: 15px;
-    }
-      }
+}
+.teste{
+  text-align: center;
+}
+h4{
+  color: white;
+}
